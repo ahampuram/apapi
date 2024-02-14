@@ -1,5 +1,21 @@
 <html>
-	<body>
-		welcome to google
+	<head>
+		<title> AhamPuram </title>
+		<script>
+			//http://localhost/?state=5EgXN2ywpucD9PAlpHibOsjai0suYM&code=4/0AeaYSHB7GjROwhrz6L57JXVp4fVCaDcsV87psYDNdHAZCk8uqrFIGP6zyB8c3jQVUFLF1w&scope=https://www.googleapis.com/auth/calendar.readonly
+			function GetCode(){
+				const urlParams = new URLSearchParams(window.location.search);
+				const myCode = urlParams.get('code');
+				alert(myCode)
+				document.getElementById("code").value = myCode;
+			}
+		</script>
+	</head>
+	<body onload="GetCode()">
+		Welcome to authorization page
+		<div>
+		<label for="fname">Autorization Code:</label>
+		<input type="text" id="code" name="code"><br><br>
+	</div>
 	</body>
 </html>
